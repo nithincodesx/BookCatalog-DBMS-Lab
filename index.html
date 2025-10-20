@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBMS Lab: Premium Book Management System</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-space">
+            <span class="logo-icon">📖</span>
+            <span class="logo-text">Premium Catalog Manager</span>
+        </div>
+        <p class="tagline">Full-Stack DBMS Project | PostgreSQL & Supabase</p>
+    </header>
+
+    <main>
+        
+        <section class="card author-section">
+            <h2>👤 Author Manager</h2>
+            <form id="author-form">
+                <input type="text" id="author-first-name" placeholder="First Name" required>
+                <input type="text" id="author-last-name" placeholder="Last Name" required>
+                <input type="text" id="author-nationality" placeholder="Nationality (Optional)">
+                <button type="submit">➕ Add New Author</button>
+            </form>
+            <div id="author-list" class="data-list">
+                <p>Loading authors...</p>
+            </div>
+        </section>
+
+        <section class="card book-section">
+            <h2>📘 Book Management (CRUD)</h2>
+            <form id="book-form" class="book-form-grid">
+                <input type="text" id="title" placeholder="Book Title" required>
+                <input type="text" id="genre" placeholder="Genre" required>
+                <input type="number" id="year" placeholder="Year" min="1000" max="2025" required>
+                <input type="number" id="author-id" placeholder="Author ID (See Author List)" required>
+                <button type="submit" class="grid-button">➕ Insert Book</button>
+            </form>
+
+            <p id="status-message" class="message"></p>
+
+            <div id="update-form-container" class="card hidden">
+                </div>
+
+            <h3>Current Catalog Data</h3>
+            <div id="catalog-list" class="data-list">
+                </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
