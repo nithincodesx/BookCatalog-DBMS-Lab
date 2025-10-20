@@ -1,8 +1,8 @@
 // ====================================================================
 // 1. SUPABASE CONFIGURATION - REPLACE WITH YOUR ACTUAL KEYS!
 // ====================================================================
-const SUPABASE_URL = 'YOUR_PROJECT_URL_HERE'; 
-const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY_HERE'; 
+const SUPABASE_URL = 'https://qowjzbibbqtzqrybmgnr.supabase.com'; 
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFvd2p6YmliYnF0enFyeWJtZ25yIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjA4MDEyNDMsImV4cCI6MjA3NjM3NzI0M30.7L8tw9TEqWL0DGXuPQFEKjNKQnJnDavxFxyzq78zcKY'; 
 
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const statusElement = document.getElementById('status-message');
